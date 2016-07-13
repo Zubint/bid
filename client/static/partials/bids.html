@@ -1,0 +1,37 @@
+<div ng-controller="BidsController">
+
+  <div>
+      <p>
+        Welcome <span ng-bind="sessionUser.userName | sentenceCase"></span>
+      </p>
+      <button ng-click="logout()">Logout</button>
+
+  </div>
+
+  <br><br>
+
+  <ul ng-repeat="error in errorsArray">
+    <li ng-bind="error"></li>
+  </ul>
+  <div ng-repeat="product in products track by $index">
+
+      <li ng-bind="product.name"> </li>
+
+      <input type="text" ng-model="product.bidAmount">
+      <button ng-click="createBid(product)">Bid</button>
+      <hr>
+      Here are the bids
+      <!-- {{product}} -->
+          <table>
+            <tr ng-repeat="bid in product._bidId | filter:search_filter">
+              {{bid}}
+              <td>{{bid._userId.name }} : {{bid.amount}}</td>
+            </tr>
+          </table>
+
+          Search: <input type="text" ng-model="search_filter"/>
+      <hr>
+  </div>
+
+    <button ng-click="doneBidding()">End bidding</button>
+</div>

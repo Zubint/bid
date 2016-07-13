@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-messages.min.js"></script>
+
+    <!-- scripts here -->
+    <script src="./js/app.js"></script>
+    <script src="./js/routes.js"></script>
+
+    <!-- controllers here -->
+    <script src="./js/controllers/users.angular.js"></script>
+      <script src="./js/controllers/bids.angular.js"></script>
+        <script src="./js/controllers/results.angular.js"></script>
+
+
+    <!-- factories here -->
+    <script src="./js/factories/user.angular.js"></script>
+    <script src="./js/factories/product.angular.js"></script>
+    <script src="./js/factories/bid.angular.js"></script>
+
+    <title>Welcome to Bids</title>
+  </head>
+  <body ng-app="myApp">
+    <div ng-view="">
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<div ng-controller="ResultsController">
+<button ng-click="logout()">logout</button>
+
+    <div ng-repeat="product in products">
+      <!-- {{products}} -->
+      <div ng-repeat="bid in product._bidId | orderBy:'-amount'">
+        <hr>
+        {{bid[0]._userId.name}} {{bid.amount}} {{ product.name}}
+      </div>
+    </div>
+
+<button ng-click="startAgain()">Start Bid</button>
+
+</div>
